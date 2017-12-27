@@ -1,24 +1,19 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
-    <app-main></app-main>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import { NavBar, AppMain } from './components/layout/'
   export default {
-    name: 'app',
-    components: {
-      NavBar,
-      AppMain
-    }
+    name: 'APP'
   }
 </script>
+
 <style lang="scss">
   @import "~bulma";
-
-  /*必须要指定其路径，不然编译出错*/
-  $fa-font-path: '~font-awesome/fonts/';
-  @import "~font-awesome/scss/font-awesome";
+  @import "~animate.css";
+  .animated {
+    animation-duration: .377s;
+  }
 </style>
