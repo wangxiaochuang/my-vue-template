@@ -15,13 +15,13 @@ const state = {
 }
 
 const getters = {
-  sidebar(state) {
+  sidebar (state) {
     return state.sidebar
   }
 }
 
 const actions = {
-  toggleSidebar: ({commit}, config) => {
+  toggleSidebar: ({ commit }, config) => {
     if (config instanceof Object) {
       commit(types.TOGGLE_SIDEBAR, config)
     }

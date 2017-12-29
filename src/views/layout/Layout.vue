@@ -1,41 +1,42 @@
 <template>
   <div class="app-wrapper">
     <div class="animated app-sidebar" :class="toggleClass.slideClass">
-      side bar
+      <side-bar></side-bar>
     </div>
     <div class="main-container" :style="toggleClass.marginLeft">
-      <navbar></navbar>
+      <nav-bar></nav-bar>
       <app-main></app-main>
     </div>
   </div>
 </template>
 
 <script>
-  import { Navbar, AppMain } from './components'
+  import { SideBar, NavBar, AppMain } from './components'
   import { mapGetters } from 'vuex'
 
   export default {
     name: 'layout',
     components: {
-      Navbar,
+      SideBar,
+      NavBar,
       AppMain
     },
     computed: {
       ...mapGetters([
         'sidebar'
       ]),
-      toggleClass(self) {
+      toggleClass (self) {
         let { opened, hidden } = self.sidebar
         let ret = {
-          slideClass: "slideInLeft",
-          marginLeft: "180px"
+          slideClass: 'slideInLeft',
+          marginLeft: '180px'
         }
         if (opened && !hidden) {
-          ret.slideClass = "slideInLeft"
-          ret.marginLeft = "margin-left: 180px"
+          ret.slideClass = 'slideInLeft'
+          ret.marginLeft = 'margin-left: 180px'
         } else {
-          ret.slideClass = "slideOutLeft"
-          ret.marginLeft = "margin-left: 0"
+          ret.slideClass = 'slideOutLeft'
+          ret.marginLeft = 'margin-left: 0'
         }
         return ret
       }
