@@ -3,12 +3,13 @@ import Router from 'vue-router'
 import Layout from '../views/layout/Layout'
 import Home from '../views/home/index'
 import Documentation from '../views/documentation/index'
+import Apidoc from '../views/documentation/apidoc'
 import Share from '../views/share/index'
 
 Vue.use(Router)
 
 export const constantRouterMap = [
-  { path: '/login', component: Home, hidden: true },
+  { path: '/login', component: Home, isHidden: true },
   {
     path: '',
     component: Layout,
@@ -24,12 +25,30 @@ export const constantRouterMap = [
     path: '/documentation',
     component: Layout,
     redirect: '/documentation/index',
-    children: [{
-      path: 'index',
-      name: 'documentation',
-      component: Documentation,
-      meta: { title: 'documentation' }
-    }]
+    meta: { title: 'documentation' },
+    children: [
+      { path: 'index', name: 'index', component: Documentation, meta: { title: 'index' } },
+      {
+        path: 'apidoc',
+        name: 'apidoc',
+        component: Apidoc,
+        meta: { title: 'apidoc' },
+        children: [
+          {
+            path: 'testdoc',
+            name: 'testdoc',
+            component: Apidoc,
+            meta: { title: 'testdoc' }
+          },
+          {
+            path: 'aaadoc',
+            name: 'aaadoc',
+            component: Apidoc,
+            meta: { title: 'aaadoc' }
+          }
+        ]
+      }
+    ]
   },
   {
     path: '/share',

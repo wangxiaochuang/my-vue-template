@@ -12,7 +12,7 @@
     },
     beforeMount () {
       const { body } = document
-      const M_WIDTH = 768
+      const M_WIDTH = 1024
       const RATIO = 3
       const handler = () => {
         if (!document.hidden) {
@@ -39,6 +39,8 @@
 
 <style lang="scss">
   @import "~bulma";
+  $fa-font-path: '~font-awesome/fonts/';
+  @import '~font-awesome/scss/font-awesome';
   @import "~animate.css";
   .animated {
     animation-duration: .377s;

@@ -2,8 +2,7 @@ import types from '../types'
 
 const state = {
   device: {
-    isMobile: false,
-    isTablet: false
+    isMobile: false
   },
   sidebar: {
     opened: false,
@@ -17,6 +16,9 @@ const state = {
 const getters = {
   sidebar (state) {
     return state.sidebar
+  },
+  device (state) {
+    return state.device
   }
 }
 
@@ -34,7 +36,6 @@ const actions = {
 const mutations = {
   [types.TOGGLE_DEVICE] (state, device) {
     state.device.isMobile = device === 'mobile'
-    state.device.isTablet = device === 'tablet'
   },
   [types.TOGGLE_SIDEBAR] (state, config) {
     if (state.device.isMobile && config.hasOwnProperty('opened')) {
@@ -46,7 +47,6 @@ const mutations = {
     if (config.hasOwnProperty('hidden')) {
       state.sidebar.hidden = config.hidden
     }
-    console.log(state.sidebar)
   }
 }
 

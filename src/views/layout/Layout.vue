@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import { SideBar, NavBar, AppMain } from './components'
+  import { SideBar, NavBar, AppMain } from './components/'
   import { mapGetters } from 'vuex'
 
   export default {
