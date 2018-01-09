@@ -39,8 +39,10 @@
 
 <style lang="scss">
   @import "~bulma";
+  //to use font-awesome in bulma
   $fa-font-path: '~font-awesome/fonts/';
   @import '~font-awesome/scss/font-awesome';
+
   @import "~animate.css";
   .animated {
     animation-duration: .377s;

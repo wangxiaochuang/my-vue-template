@@ -5,11 +5,12 @@ import Home from '../views/home/index'
 import Documentation from '../views/documentation/index'
 import Apidoc from '../views/documentation/apidoc'
 import Share from '../views/share/index'
+import Login from '../views/auth/Login'
 
 Vue.use(Router)
 
 export const constantRouterMap = [
-  { path: '/login', component: Home, isHidden: true },
+  { path: '/login', component: Login, isHidden: true },
   {
     path: '',
     component: Layout,

@@ -26,14 +26,14 @@
         'sidebar'
       ]),
       toggleClass (self) {
-        let { opened, hidden } = self.sidebar
+        let { opened } = self.sidebar
         let ret = {
           slideClass: 'slideInLeft',
-          marginLeft: '180px'
+          marginLeft: '210px'
         }
-        if (opened && !hidden) {
+        if (opened) {
           ret.slideClass = 'slideInLeft'
-          ret.marginLeft = 'margin-left: 180px'
+          ret.marginLeft = 'margin-left: 210px'
         } else {
           ret.slideClass = 'slideOutLeft'
           ret.marginLeft = 'margin-left: 0'
@@ -55,12 +55,10 @@
       top: 0;
       left: 0;
       bottom: 0;
-      width: 180px;
-      min-width: 45px;
+      width: 210px;
       max-height: 100vh;
       z-index: 1024 - 1;
-      background: #FFF;
-      box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1), 0 0 0 1px rgba(17, 17, 17, 0.1);
+      /*box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1), 0 0 0 1px rgba(17, 17, 17, 0.1);*/
       overflow-y: auto;
       overflow-x: hidden;
     }

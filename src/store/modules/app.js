@@ -5,8 +5,7 @@ const state = {
     isMobile: false
   },
   sidebar: {
-    opened: false,
-    hidden: false
+    opened: false
   },
   effect: {
     translate3d: true
@@ -42,10 +41,6 @@ const mutations = {
       state.sidebar.opened = config.opened
     } else {
       state.sidebar.opened = true
-    }
-
-    if (config.hasOwnProperty('hidden')) {
-      state.sidebar.hidden = config.hidden
     }
   }
 }

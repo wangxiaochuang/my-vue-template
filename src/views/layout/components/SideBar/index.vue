@@ -1,5 +1,10 @@
 <template>
-  <el-menu>
+  <el-menu
+    backgroundColor="#545c64"
+    textColor="#FFF"
+    activeTextColor="#ffd04b"
+    uniqueOpened="true"
+    class="menu-sidebar">
     <side-bar-item :routes="permission_routers"></side-bar-item>
   </el-menu>
 </template>
@@ -19,4 +24,8 @@
   }
 </script>
 <style lang="scss">
+  .menu-sidebar {
+    height: 100%;
+    color: white;
+  }
 </style>
