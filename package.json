@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@websanova/vue-auth": "^2.21.0-beta",
     "animate.css": "^3.5.2",
     "animejs": "^2.2.0",
     "bulma": "^0.6.1",
